@@ -1,15 +1,15 @@
 <div align="center">
-  <img src="resources/AvalancheLogoRed.png?raw=true">
+  <img src="resources/Candle.png?raw=true">
 </div>
 
 ---
 
-Node implementation for the [Avalanche](https://avax.network) network -
+Node implementation for the [Candle](https://avax.network) network -
 a blockchains platform with high throughput, and blazing fast transactions.
 
 ## Installation
 
-Avalanche is an incredibly lightweight protocol, so the minimum computer requirements are quite modest.
+Candle is an incredibly lightweight protocol, so the minimum computer requirements are quite modest.
 Note that as network usage increases, hardware requirements may change.
 
 The minimum recommended hardware specification for nodes connected to Mainnet is:
@@ -20,7 +20,7 @@ The minimum recommended hardware specification for nodes connected to Mainnet is
 - OS: Ubuntu 18.04/20.04 or macOS >= 10.15 (Catalina)
 - Network: Reliable IPv4 or IPv6 network connection, with an open public port.
 
-If you plan to build AvalancheGo from source, you will also need the following software:
+If you plan to build CandleGo from source, you will also need the following software:
 
 - [Go](https://golang.org/doc/install) version >= 1.17.9
 - [gcc](https://gcc.gnu.org/)
@@ -28,28 +28,28 @@ If you plan to build AvalancheGo from source, you will also need the following s
 
 ### Native Install
 
-Clone the AvalancheGo repository:
+Clone the CandleGo repository:
 
 ```sh
 git clone git@github.com:ava-labs/avalanchego.git
-cd avalanchego
+cd Candlego
 ```
 
 This will clone and checkout to `master` branch.
 
-#### Building the Avalanche Executable
+#### Building the Candle Executable
 
-Build Avalanche using the build script:
+Build Candle using the build script:
 
 ```sh
 ./scripts/build.sh
 ```
 
-The Avalanche binary, named `avalanchego`, is in the `build` directory.
+The Candle binary, named `Candlego`, is in the `build` directory.
 
 ### Binary Repository
 
-Install AvalancheGo using an `apt` repository.
+Install CandleGo using an `apt` repository.
 
 #### Adding the APT Repository
 
@@ -86,7 +86,7 @@ sudo apt install avalanchego
 
 Download the [latest build](https://github.com/ava-labs/avalanchego/releases/latest) for your operating system and architecture.
 
-The Avalanche binary to be executed is named `avalanchego`.
+The Candle binary to be executed is named `avalanchego`.
 
 ### Docker Install
 
@@ -104,17 +104,17 @@ To check the built image, run:
 docker image ls
 ```
 
-The image should be tagged as `avaplatform/avalanchego:xxxxxxxx`, where `xxxxxxxx` is the shortened commit of the Avalanche source it was built from. To run the avalanche node, run:
+The image should be tagged as `avaplatform/avalanchego:xxxxxxxx`, where `xxxxxxxx` is the shortened commit of the Candle source it was built from. To run the avalanche node, run:
 
 ```sh
 docker run -ti -p 9650:9650 -p 9651:9651 avaplatform/avalanchego:xxxxxxxx /avalanchego/build/avalanchego
 ```
 
-## Running Avalanche
+## Running Candle
 
 ### Connecting to Mainnet
 
-To connect to the Avalanche Mainnet, run:
+To connect to the Candle Mainnet, run:
 
 ```sh
 ./build/avalanchego
@@ -148,7 +148,7 @@ The bottleneck during bootstrapping is typically database IO. Using a more power
 
 ## Generating Code
 
-Avalanchego uses multiple tools to generate efficient and boilerplate code.
+Candlego uses multiple tools to generate efficient and boilerplate code.
 
 ### Running protobuf codegen
 
@@ -191,7 +191,7 @@ docker run -t -i -v $(pwd):/opt/avalanche -w/opt/avalanche avalanche:protobuf_co
 
 ## Supported Platforms
 
-AvalancheGo can run on different platforms, with different support tiers:
+CandleGo can run on different platforms, with different support tiers:
 
 - **Tier 1**: Fully supported by the maintainers, guaranteed to pass all tests including e2e and stress tests.
 - **Tier 2**: Passes all unit and integration tests but not necessarily e2e tests.
@@ -199,7 +199,7 @@ AvalancheGo can run on different platforms, with different support tiers:
 - **Not supported**: May not build and not tested, considered _unsafe_. To be supported in the future.
 
 The following table lists currently supported platforms and their corresponding
-AvalancheGo support tiers:
+CandleGo support tiers:
 
 | Architecture | Operating system | Support tier  |
 | :----------: | :--------------: | :-----------: |
@@ -213,7 +213,7 @@ AvalancheGo support tiers:
 
 To officially support a new platform, one must satisfy the following requirements:
 
-| AvalancheGo continuous integration | Tier 1  | Tier 2  | Tier 3  |
+| CandleGo continuous integration | Tier 1  | Tier 2  | Tier 3  |
 | ---------------------------------- | :-----: | :-----: | :-----: |
 | Build passes                       | &check; | &check; | &check; |
 | Unit and integration tests pass    | &check; | &check; |         |
